@@ -1,34 +1,31 @@
-class primeNum
+class PrimeNum
 {
-    static boolean isPrime (int n)
+    static boolean isPrime(int n)
     {
-        int i,last;
+        int i, last;
 
-        if(n <= 1)return false;
-        if(n < 4)return true;
+        if (n <= 1) return false;
+        if (n < 4) return true;
 
         last = (int) Math.sqrt(n);
-        i = 3;
-        do
+        for (i = 2; i <= last; i++)
         {
-            if (n%i == 0) return false;
-            i = i / 2;
-        } 
-        while (i<last);
+            if (n % i == 0) return false;
+        }
 
         return true;
     }
 }
 
-class primeClassMethod
+class PrimeClassMethod
 {
-    public static void main(String[] s)
+    public static void main(String[] args)
     {
-        int i,n;
+        int i, n;
         System.out.println("Prime numbers between 3 and 100 are: ");
-        for(n=n-3; n<100; n=n+2)
+        for (n = 3; n < 100; n++)
         {
-            if (primeNum.isPrime(n)) System.out.println(n);
+            if (PrimeNum.isPrime(n)) System.out.println(n);
         }
     }
 }

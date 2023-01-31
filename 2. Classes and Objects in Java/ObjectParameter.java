@@ -4,14 +4,15 @@ class Rectangle
 
     Rectangle(double x, double y)
     {
-        length = x; width = y;
+        length = x; 
+        width = y;
     }
     Rectangle(){};
 
     double area(){return length * width;}
     void display()
     {
-        System.out.println("Rectangle with length = " + length + "width = " + width);
+        System.out.println("Rectangle with length = " + length + " width = " + width);
     }
     double getLength(){return length;}
     double getWidth(){return width;}
@@ -20,7 +21,6 @@ class Rectangle
         if(area() > rect.area()) return true;
         else return false;
     }
-
 }
 
 class ObjectParameter
@@ -34,6 +34,5 @@ class ObjectParameter
         System.out.println("Area of Rectangle is " + rect1.area() + "\n");
         rect2.display();
         System.out.println("Area of Rectangle 2 is " + rect2.area() + "\n");
-   
     }
 }
