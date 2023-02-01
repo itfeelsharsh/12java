@@ -22,6 +22,7 @@ class FixedDeposit
 }
 
 class FixedDepositDemo
+
 {
     FixedDeposit f1 = new FixedDeposit();
     FixedDeposit f2 = new FixedDeposit();
